@@ -1,0 +1,118 @@
+.booster-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booster-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.open-booster-button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.open-booster-button:hover {
+  background-color: #45a049;
+}
+
+.open-booster-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
+  justify-items: center;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.9);
+  transform-origin: top center;
+  width: 100%;
+  max-width: 220px;
+}
+
+.card-status {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  z-index: 1;
+}
+
+.card-status.nouveau {
+  background-color: #4CAF50;
+}
+
+.card-status.dupliqué {
+  background-color: #4a90e2;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.card-quantity {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: #FF9800;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 1.5rem;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  background-color: #f8d7da;
+  border-radius: 4px;
+}
+
+.empty-booster {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+} 

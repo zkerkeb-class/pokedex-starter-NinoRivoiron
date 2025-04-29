@@ -1,0 +1,124 @@
+.auth-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.auth-header h1 {
+  color: #333a60;
+  margin: 20px 0;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #424b7e;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6976bd;
+  box-shadow: 0 0 5px rgba(105, 118, 189, 0.5);
+}
+
+.submit-button {
+  background-color: #6976bd;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #424b7e;
+  transform: translateY(-2px);
+}
+
+.auth-redirect {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.auth-redirect a {
+  color: #6976bd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-redirect a:hover {
+  text-decoration: underline;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+}
+
+.password-input-container input {
+  flex: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toggle-password {
+  padding: 0 15px;
+  background-color: #e9ecef;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: background-color 0.3s;
+}
+
+.toggle-password:hover {
+  background-color: #dae0e5;
+}
+
+.password-error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 5px;
+} 
