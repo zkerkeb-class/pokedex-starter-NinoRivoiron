@@ -1,0 +1,169 @@
+.create-card-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.create-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.create-card-header h1 {
+  color: #333a60;
+  margin: 20px 0;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.create-card-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 20px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #424b7e;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #6976bd;
+  box-shadow: 0 0 5px rgba(105, 118, 189, 0.5);
+}
+
+h2 {
+  color: #333a60;
+  margin: 20px 0;
+  border-bottom: 2px solid #6976bd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.submit-button {
+  background-color: #6976bd;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #424b7e;
+  transform: translateY(-2px);
+}
+
+/* Ajouter ce style pour les indications de max */
+.stat-max {
+  font-weight: 300;
+  font-size: 0.85em;
+  color: #777;
+  margin-left: 5px;
+}
+
+/* Ajouter ce style pour les messages d'erreur */
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style pour le bouton désactivé pendant la soumission */
+.submit-button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Aligner les champs numériques */
+.form-row .form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  max-width: none;
+}
+
+/* Supprimer la marge droite des groupes qui peut causer un décalage */
+.form-row .form-group {
+  margin-right: 0;
+}
+
+/* Styliser tous les champs de saisie de la même manière */
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Uniformiser la largeur du conteneur principal */
+.create-card-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Aligner le titre et sa barre */
+h2 {
+  color: #333a60;
+  margin: 20px 0;
+  border-bottom: 2px solid #6976bd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+} 

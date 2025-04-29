@@ -1,0 +1,295 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Empêcher le défilement de la page principale */
+html, body {
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important; /* Empêcher le défilement de la page entière */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Utiliser height au lieu de min-height */
+  background-color: #2c3e50;
+  overflow: hidden; /* Empêcher le défilement de la page entière */
+}
+
+.search-filters-row {
+  padding: 4px 20px; /* Réduire le padding vertical de 8px à 4px */
+  background-color: #34495e;
+  border-bottom: 1px solid #1a2530;
+  flex-shrink: 0; /* Empêcher la réduction */
+}
+
+.style-page {
+  flex: 1;
+  overflow: hidden; /* Empêcher le défilement de la page entière */
+  padding: 0px;
+  background-color: #2c3e50;
+  position: relative;
+}
+
+.pokemon-body {
+  display: flex;
+  height: 100%; /* Utiliser height au lieu de min-height */
+  gap: 15px;
+  overflow: hidden; /* Empêcher le défilement de la page entière */
+}
+
+.pokemon-card-section {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 460px; /* Légèrement plus petit */
+  height: auto;
+  position: relative;
+  overflow: visible;
+  padding-bottom: 30px; /* Réduire l'espace inférieur */
+}
+
+.pokedex-section {
+  flex: 1;
+  overflow-y: auto; /* Permettre le défilement vertical uniquement dans cette section */
+  overflow-x: hidden; /* Empêcher le défilement horizontal */
+  padding: 10px;
+  border-left: 1px solid #4a5a66;
+  background-color: #34495e;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  min-height: 0; /* Important pour permettre aux conteneurs flex de scroller */
+}
+
+.card-navigation-buttons {
+  position: static;
+  margin-top: 10px;
+  bottom: auto;
+  left: auto;
+  right: auto;
+}
+
+.nav-button, .chroma-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.nav-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.chroma-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.nav-button:hover, .chroma-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.nav-button:active, .chroma-button:active {
+  transform: scale(0.98);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.pokemon-card-section > div:first-child {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 0;
+  overflow: visible;
+}
+
+/* Réduire la hauteur de la carte si nécessaire sur petits écrans */
+@media (max-height: 700px) {
+  .pokemon-card-section .pokemon-types {
+    height: 60px !important;
+    min-height: 60px !important;
+  }
+  
+  .pokemon-card-section .image-container {
+    padding: 2px !important;
+  }
+  
+  .pokemon-card-section .pokemon-stats {
+    padding: 1px 0 !important;
+  }
+}
+
+.type-icon {
+  width: 45px !important;
+  height: 45px !important;
+  margin: 2px !important;
+  transform: scale(1.5) !important;
+}
+
+.pokemon-types {
+  gap: 8px !important;
+  margin: 5px 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Styles spécifiques pour les icônes de types dans le composant PokemonCardWithModif */
+.pokemon-card-section .type-icon {
+    width: 30px !important;
+    height: 30px !important;
+    margin: 2px !important;
+    transform: scale(3.0) !important;
+    object-fit: contain !important;
+}
+
+.pokemon-card-section .pokemon-types {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 60px !important;
+    margin: 0 0 -5px 0 !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    padding: 0 !important;
+}
+
+.pokemon-card-section .pokemon-name {
+    margin: 0 0 -5px 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.pokemon-card-section .image-container {
+    margin: 0 auto 3px auto !important;
+    padding: 3px !important;
+    border-width: 2px !important;
+}
+
+.pokemon-card-section .pokemon-stats {
+    padding: 2px 0 !important;
+}
+
+.pokemon-card-section .bar {
+    margin: 1px 0 !important;
+    height: 10px !important;
+}
+
+.pokemon-card-section .action-buttons {
+  gap: 5px !important;
+  margin-top: 5px !important;
+  bottom: -30px !important;
+}
+
+.pokemon-card-section .edit-button, 
+.pokemon-card-section .delete-button {
+  padding: 4px 8px !important;
+  font-size: 13px !important;
+}
+
+/* Réduire l'espacement sur les petits écrans */
+@media (max-height: 768px) {
+  .search-filters-row {
+    padding: 2px 15px; /* Réduire davantage sur petits écrans */
+  }
+  
+  .style-page {
+    padding: 2px 5px; /* Réduire davantage sur petits écrans */
+  }
+  
+  .pokemon-body {
+    gap: 10px;
+  }
+  
+  .pokemon-card-section {
+    padding-bottom: 20px;
+  }
+  
+  .pokedex-section {
+    padding: 5px;
+  }
+  
+  .nav-button, .chroma-button {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-height: 650px) {
+  .search-filters-row {
+    padding: 3px 10px;
+  }
+  
+  .pokedex-section {
+    padding: 3px;
+  }
+  
+  .pokemon-card-section > div:first-child {
+    max-width: 400px;
+  }
+  
+  .pokemon-card-section .pokemon-types {
+    height: 40px !important;
+    min-height: 40px !important;
+    margin: 0 0 -10px 0 !important;
+  }
+  
+  .pokemon-card-section .pokemon-name {
+    margin: 0 0 -10px 0 !important;
+  }
+  
+  .pokemon-card-section .pokemon-stats {
+    font-size: 0.8em !important;
+  }
+  
+  .pokemon-card-section .bar {
+    height: 6px !important;
+  }
+}
+
+/* Pour les écrans larges mais bas */
+@media (min-width: 1200px) and (max-height: 700px) {
+  .pokemon-body {
+    align-items: flex-start;
+  }
+  
+  .pokemon-card-section {
+    padding-top: 0;
+  }
+}
+
+/* Assurer la visibilité des boutons de navigation */
+.pokemon-card-section .card-navigation-buttons {
+  margin-top: 5px;
+}
